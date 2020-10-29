@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConferenceOrganizer": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\"
+    }
+  }
+}
