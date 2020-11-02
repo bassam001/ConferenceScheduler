@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 
-
+using Newtonsoft.Json;
 
 namespace ConferenceOrganizer
 {
@@ -36,7 +37,9 @@ namespace ConferenceOrganizer
             Event1.CreateEvent();
             Event1.PrintTracks();
 
-           
+       
+
+
 
         }
 
@@ -49,7 +52,12 @@ namespace ConferenceOrganizer
             {
                 Talk aTalk = new Talk(value, TxtReader.FindDuration(value));
                 ListOfAllTalks.Add(aTalk);
+
+
+
             }
+
+            
 
         }
         
@@ -57,6 +65,8 @@ namespace ConferenceOrganizer
         {
              Session NewSession = new Session(startTime, endTime);
                 ListOfSessions.Add(NewSession);
+
+      
         }
 
         

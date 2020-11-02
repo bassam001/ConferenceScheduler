@@ -8,7 +8,7 @@ namespace ConferenceOrganizer
    public class Session
     {
 
-        //Er zijn aleen twee vast sesstie type, of drie alles we LunchBreak als een sesstie beschouwd , daardoor wordt enum gebruikt (enum is een value type)
+        //Er zijn aleen twee vast sesstie type, of drie alles we LunchBreak als een sesstie beschouwd , daardoor wordt enum gebruikt 
         public enum SESSION_TYPE { MORNING, AFTERNOON };
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
@@ -112,8 +112,7 @@ namespace ConferenceOrganizer
                     NewTalk.StartTime = aTalk.EndTime;
                     NewTalk.EndTime = NewTalk.StartTime.Add(NewTalk.TalkDuration);
                 }
-                else
-                    break;
+               
             }
             if ((NewTalk.EndTime <= EndTime) && (NewTalk.StartTime >= Talk.NetworkMinStart) && (NewTalk.StartTime <= Talk.NetworkMaxStart))
             {

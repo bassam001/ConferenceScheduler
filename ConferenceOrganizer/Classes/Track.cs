@@ -10,23 +10,19 @@ namespace ConferenceOrganizer
 
        
         public   List<Session> TrackSessions { get; set; }
-
-        public Track ( )
+        public Track(List<Session> ListOfSessions )
         {
 
             TrackSessions = new List<Session>();
-
-        }
-
-        internal void CopyMasterSessions(List<Session> sessions)
-        {
-            foreach (Session aSession in sessions)
+            foreach (Session aSession in ListOfSessions)
             {
                 Session TrackSession = new Session(aSession);
                 TrackSessions.Add(TrackSession);
             }
+            
         }
 
+      
 
         internal  bool AddTalk(Talk aTalk)
         {
